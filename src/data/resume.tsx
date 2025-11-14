@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "Computer Science student and aspiring software engineer. I love building AI-powered solutions and solving real-world problems through code.",
   summary:
-    "I'm currently pursuing my BTech in Computer Science at Keshav Memorial Institute of Technology. I have a strong foundation in software development with experience in building [AI-based systems for maritime surveillance](/#projects), [real-time gesture communication platforms](/#projects), and [smart budgeting applications](/#projects). I secured 1st place at TechSurge '25 Hackathon and have a published patent for Hand Sign Language Translation System. I'm passionate about creating innovative solutions that make a meaningful impact.",
+    "Looking to work on real-world software projects, solve problems, and contribute effectively in a collaborative team environment. I'm currently pursuing my BTech in Computer Science at Keshav Memorial Institute of Technology with a CGPA of 8.1/10. I have experience building [AI-based systems for maritime surveillance](/#projects), [real-time gesture communication platforms](/#projects), and [smart budgeting applications](/#projects). I secured 1st place at TechSurge '25 Hackathon and have a published patent for Hand Sign Language Translation System.",
   avatarUrl: "/image.png",
   skills: [
     "C",
@@ -24,8 +24,11 @@ export const DATA = {
     "MongoDB",
     "Git",
     "PyVips",
+    "OpenSeadragon",
     "MediaPipe",
-    "Gemini AI",
+    "WebSockets",
+    "Gemini API",
+    "Web Speech API",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -53,6 +56,12 @@ export const DATA = {
         icon: Icons.globe,
         navbar: true,
       },
+      X: {
+        name: "X",
+        url: "https://x.com/omkar-codehub",
+        icon: Icons.x,
+        navbar: false,
+      },
       email: {
         name: "Send Email",
         url: "mailto:moreomkar2005@gmail.com",
@@ -63,65 +72,41 @@ export const DATA = {
   },
 
   work: [
-    // Add your work experience here when you have it
-    // Example format:
-    // {
-    //   company: "Company Name",
-    //   href: "https://company.com",
-    //   badges: [],
-    //   location: "Location",
-    //   title: "Position",
-    //   logoUrl: "/company-logo.png",
-    //   start: "Month Year",
-    //   end: "Month Year",
-    //   description: "Description of your work...",
-    // },
-  ],
+    // Add work experience when available
+  ] as Array<{
+    company: string;
+    href: string;
+    badges?: readonly string[];
+    location: string;
+    title: string;
+    logoUrl: string;
+    start: string;
+    end: string | undefined;
+    description: string;
+  }>,
 
   education: [
     {
       school: "Keshav Memorial Institute of Technology",
       href: "https://kmit.in",
-      degree: "Bachelor of Technology in Computer Science",
+      degree: "BTech in Computer Science",
       logoUrl: "/kmit.png",
-      start: "2024",
+      start: "Aug 2024",
       end: "2027",
+      description: "CGPA: 8.1/10",
     },
     {
       school: "Government Polytechnic College, Nizamabad",
       href: "#",
       degree: "Diploma in Computer Science",
       logoUrl: "/gpc.png",
-      start: "2021",
-      end: "2024",
+      start: "Aug 2021",
+      end: "May 2024",
+      description: "CGPA: 9.4/10",
     },
   ],
 
   projects: [
-    {
-      title: "Pocket Pilot",
-      href: "#",
-      dates: "2025",
-      active: true,
-      description:
-        "Developed an AI-based smart budgeting application with voice-activated expense logging, spending analysis, and automated micro-savings. Integrated Gemini AI to provide personalized financial insights and a Regret Radar feature to warn users about potentially regretful spending. Won 1st Place at TechSurge '25 Hackathon.",
-      technologies: [
-        "Gemini API",
-        "Web Speech API",
-        "JavaScript",
-        "Node.js",
-        "AI/ML",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "#",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    },
     {
       title: "SAR Marine Surveillance",
       href: "#",
@@ -159,12 +144,37 @@ export const DATA = {
         "Python",
         "JavaScript",
         "Real-time Communication",
+        "Computer Vision",
       ],
       links: [
         {
           type: "Source",
           href: "https://github.com/omkar-codehub/ASTRA",
           icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Pocket Pilot",
+      href: "#",
+      dates: "2025",
+      active: true,
+      description:
+        "Developed an AI-based smart budgeting application with voice-activated expense logging, spending analysis, and automated micro-savings. Integrated Gemini AI to provide personalized financial insights and a Regret Radar feature to warn users about potentially regretful spending. Won 1st Place at TechSurge '25 Hackathon.",
+      technologies: [
+        "Gemini API",
+        "Web Speech API",
+        "JavaScript",
+        "Node.js",
+        "AI/ML",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "#",
+          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
@@ -180,7 +190,7 @@ export const DATA = {
       description:
         "Secured 1st Place for developing Pocket Pilot, an AI-based smart budgeting platform with voice-activated expense logging and personalized financial insights using Gemini AI.",
       image: "",
-      win: "1st Place Winner",
+      win: "1st Place",
       links: [],
     },
   ],

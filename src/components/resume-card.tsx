@@ -10,7 +10,7 @@ import Link from "next/link";
 import React from "react";
 
 interface ResumeCardProps {
-  logoUrl: string;
+  logoUrl?: string;
   altText: string;
   title: string;
   subtitle?: string;
